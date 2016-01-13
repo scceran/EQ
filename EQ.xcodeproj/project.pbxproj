@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		16979C491C42A37C000C338C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16979C481C42A37C000C338C /* AppDelegate.swift */; };
-		16979C4B1C42A37C000C338C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16979C4A1C42A37C000C338C /* ViewController.swift */; };
 		16979C4E1C42A37C000C338C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16979C4C1C42A37C000C338C /* Main.storyboard */; };
 		16979C501C42A37C000C338C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16979C4F1C42A37C000C338C /* Assets.xcassets */; };
 		16979C531C42A37C000C338C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16979C511C42A37C000C338C /* LaunchScreen.storyboard */; };
 		16979C5E1C42A37C000C338C /* EQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16979C5D1C42A37C000C338C /* EQTests.swift */; };
 		16979C691C42A37C000C338C /* EQUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16979C681C42A37C000C338C /* EQUITests.swift */; };
+		16979C771C42A416000C338C /* EQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16979C761C42A416000C338C /* EQViewController.swift */; };
+		16979C791C42AE02000C338C /* TitleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16979C781C42AE02000C338C /* TitleMenuViewController.swift */; };
+		16979C7B1C42AE6D000C338C /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16979C7A1C42AE6D000C338C /* EndViewController.swift */; };
+		16979C7D1C42B040000C338C /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16979C7C1C42B040000C338C /* GameKit.framework */; };
+		16979C7F1C42B8BD000C338C /* EQBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16979C7E1C42B8BD000C338C /* EQBrain.swift */; };
+		16979C811C42B9F4000C338C /* EmojiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16979C801C42B9F4000C338C /* EmojiDictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,6 @@
 /* Begin PBXFileReference section */
 		16979C451C42A37C000C338C /* EQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16979C481C42A37C000C338C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16979C4A1C42A37C000C338C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16979C4D1C42A37C000C338C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16979C4F1C42A37C000C338C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16979C521C42A37C000C338C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,12 @@
 		16979C641C42A37C000C338C /* EQUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EQUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16979C681C42A37C000C338C /* EQUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQUITests.swift; sourceTree = "<group>"; };
 		16979C6A1C42A37C000C338C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16979C761C42A416000C338C /* EQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EQViewController.swift; sourceTree = "<group>"; };
+		16979C781C42AE02000C338C /* TitleMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleMenuViewController.swift; sourceTree = "<group>"; };
+		16979C7A1C42AE6D000C338C /* EndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
+		16979C7C1C42B040000C338C /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		16979C7E1C42B8BD000C338C /* EQBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EQBrain.swift; sourceTree = "<group>"; };
+		16979C801C42B9F4000C338C /* EmojiDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiDictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16979C7D1C42B040000C338C /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +88,7 @@
 		16979C3C1C42A37C000C338C = {
 			isa = PBXGroup;
 			children = (
+				16979C7C1C42B040000C338C /* GameKit.framework */,
 				16979C471C42A37C000C338C /* EQ */,
 				16979C5C1C42A37C000C338C /* EQTests */,
 				16979C671C42A37C000C338C /* EQUITests */,
@@ -97,12 +109,16 @@
 		16979C471C42A37C000C338C /* EQ */ = {
 			isa = PBXGroup;
 			children = (
-				16979C481C42A37C000C338C /* AppDelegate.swift */,
-				16979C4A1C42A37C000C338C /* ViewController.swift */,
 				16979C4C1C42A37C000C338C /* Main.storyboard */,
+				16979C7E1C42B8BD000C338C /* EQBrain.swift */,
+				16979C781C42AE02000C338C /* TitleMenuViewController.swift */,
+				16979C761C42A416000C338C /* EQViewController.swift */,
+				16979C7A1C42AE6D000C338C /* EndViewController.swift */,
+				16979C801C42B9F4000C338C /* EmojiDictionary.swift */,
 				16979C4F1C42A37C000C338C /* Assets.xcassets */,
 				16979C511C42A37C000C338C /* LaunchScreen.storyboard */,
 				16979C541C42A37C000C338C /* Info.plist */,
+				16979C481C42A37C000C338C /* AppDelegate.swift */,
 			);
 			path = EQ;
 			sourceTree = "<group>";
@@ -193,6 +209,12 @@
 				TargetAttributes = {
 					16979C441C42A37C000C338C = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 35262P572X;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					16979C581C42A37C000C338C = {
 						CreatedOnToolsVersion = 7.2;
@@ -256,7 +278,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16979C4B1C42A37C000C338C /* ViewController.swift in Sources */,
+				16979C7F1C42B8BD000C338C /* EQBrain.swift in Sources */,
+				16979C7B1C42AE6D000C338C /* EndViewController.swift in Sources */,
+				16979C791C42AE02000C338C /* TitleMenuViewController.swift in Sources */,
+				16979C771C42A416000C338C /* EQViewController.swift in Sources */,
+				16979C811C42B9F4000C338C /* EmojiDictionary.swift in Sources */,
 				16979C491C42A37C000C338C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,10 +425,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EQ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Can.Ceran.EQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -410,10 +440,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EQ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Can.Ceran.EQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +518,7 @@
 				16979C6F1C42A37C000C338C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16979C701C42A37C000C338C /* Build configuration list for PBXNativeTarget "EQTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +527,7 @@
 				16979C721C42A37C000C338C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16979C731C42A37C000C338C /* Build configuration list for PBXNativeTarget "EQUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +536,7 @@
 				16979C751C42A37C000C338C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
