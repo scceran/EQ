@@ -12,6 +12,7 @@ class EQViewController: UIViewController {
     
     // MARK: PROPOERTIES
     
+    let yellowColor = UIColor(red: CGFloat(254.0/255.0), green: CGFloat(199.0/255.0), blue: CGFloat(75.0/255.0), alpha: 1.0)
     var currentEmoji: String?
     var currentQuestion = 1 {
         didSet {
@@ -34,14 +35,7 @@ class EQViewController: UIViewController {
     }
     @IBOutlet weak var emojiLabel: UILabel!
     
-    @IBOutlet var optionButtonLabels: [UIButton]! {
-        didSet {
-            let yellowColor = UIColor(red: 254/255, green: 199/255, blue: 75/255, alpha: 1)
-            for button in optionButtonLabels {
-                button.backgroundColor = yellowColor
-            }
-        }
-    }
+    @IBOutlet var optionButtonLabels: [UIButton]!
     
     var brain = EQBrain()
     

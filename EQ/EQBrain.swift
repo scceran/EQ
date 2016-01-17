@@ -12,7 +12,7 @@ class EQBrain {
     
     // MARK: PROPERTIES
     var quizSet = [String]()
-    let quizLength: Int = 3
+    let quizLength: Int = 25
     var rawScore: Int = 0
     var score: Double {
         get {

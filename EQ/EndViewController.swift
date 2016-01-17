@@ -8,6 +8,7 @@
 
 import UIKit
 import GameKit
+import Social
 
 struct UserLevel {
     static let Newbie = "Newbie"
@@ -38,9 +39,48 @@ class EndViewController: UIViewController {
     // MARK: ACTIONS
     
     @IBAction func facebookButton(sender: UIButton) {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
+            let facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            let defaults = NSUserDefaults.standardUserDefaults()
+            let score = defaults.valueForKey("Last Score") as? Double
+            facebookSheet.setInitialText("I scored \(score)% in Emoji Quiz. I am \(levelTitleLabel.text) :-) Play now to learn your level!")
+            let logo = UIImage(named: "logo")
+            facebookSheet.addImage(logo)
+            facebookSheet.addURL(NSURL(string: "http://www.appstorelink.com"))
+            self.presentViewController(facebookSheet, animated: true, completion: nil)
+        } else {
+            if #available(iOS 8.0, *) {
+                let alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            } else {
+                // Fallback on earlier versions
+            }
+            
+        }
+
     }
     
     @IBAction func twitterButton(sender: UIButton) {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
+            let twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            let defaults = NSUserDefaults.standardUserDefaults()
+            let score = defaults.valueForKey("Last Score") as? Double
+            twitterSheet.setInitialText("I scored \(score)% in Emoji Quiz. I am \(levelTitleLabel.text) :-) Play now to learn your level!")
+            let logo = UIImage(named: "logo")
+            twitterSheet.addImage(logo)
+            twitterSheet.addURL(NSURL(string: "http://www.appstorelink.com"))
+            self.presentViewController(twitterSheet, animated: true, completion: nil)
+        } else {
+            if #available(iOS 8.0, *) {
+                let alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            } else {
+                // Fallback on earlier versions
+            }
+            
+        }
     }
     
     private func retrieveScore() {
