@@ -60,9 +60,22 @@ class TitleMenuViewController: UIViewController, GKGameCenterControllerDelegate 
         gcVC.leaderboardIdentifier = "Leaderboard"
         self.presentViewController(gcVC, animated: true, completion: nil)
     }
+    
+    private func detectFirstLaunch() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let launchedBefore = defaults.boolForKey("launchedBefore")
+        if launchedBefore {
+            print("This is not the first launch of the app.")
+        } else {
+            defaults.setValue(Double(0.0), forKey: "Highest Score")
+            defaults.setBool(true, forKey: "launchedBefore")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.authenticateLocalPlayer()
+        self.detectFirstLaunch()
         // Do any additional setup after loading the view.
     }
 
