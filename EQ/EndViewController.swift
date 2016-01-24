@@ -43,10 +43,13 @@ class EndViewController: UIViewController {
             let facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
             let defaults = NSUserDefaults.standardUserDefaults()
             let score = defaults.valueForKey("Last Score") as? Double
-            facebookSheet.setInitialText("I scored \(score)% in Emoji Quiz. I am \(levelTitleLabel.text) :-) Play now to learn your level!")
+            
+            let scoreInt = Int(score!)
+            let level = checkLevel(score!)
+            facebookSheet.setInitialText("I scored \(scoreInt)% in Emoji Quiz. I am \(level) :-) Download now to learn your level!")
             let logo = UIImage(named: "logo")
             facebookSheet.addImage(logo)
-            facebookSheet.addURL(NSURL(string: "http://www.appstorelink.com"))
+            facebookSheet.addURL(NSURL(string: "http://apple.co/1VgzE7H"))
             self.presentViewController(facebookSheet, animated: true, completion: nil)
         } else {
             if #available(iOS 8.0, *) {
@@ -66,10 +69,12 @@ class EndViewController: UIViewController {
             let twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             let defaults = NSUserDefaults.standardUserDefaults()
             let score = defaults.valueForKey("Last Score") as? Double
-            twitterSheet.setInitialText("I scored \(score)% in Emoji Quiz. I am \(levelTitleLabel.text) :-) Play now to learn your level!")
+            let scoreInt = Int(score!)
+            let level = checkLevel(score!)
+            twitterSheet.setInitialText("I scored \(scoreInt)% in Emoji Quiz. I am \(level) :-) Download now to learn your level!")
             let logo = UIImage(named: "logo")
             twitterSheet.addImage(logo)
-            twitterSheet.addURL(NSURL(string: "http://www.appstorelink.com"))
+            twitterSheet.addURL(NSURL(string: "hhttp://apple.co/1VgzE7H"))
             self.presentViewController(twitterSheet, animated: true, completion: nil)
         } else {
             if #available(iOS 8.0, *) {
